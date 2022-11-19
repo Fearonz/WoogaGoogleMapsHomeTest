@@ -19,6 +19,7 @@ namespace WoogaGoogleMapsHomeTest
     public class Tests
     {
         IWebDriver webDriver;
+        //choose web driver here
         string pickBrowser = "chrome";
         int count = 1;
         
@@ -51,6 +52,7 @@ namespace WoogaGoogleMapsHomeTest
 
         public void TakeScreenShot()
         {
+            //takes a screenshot of each google maps search, names its TestScrenshot[broswer]-[count] 
             ((ITakesScreenshot)webDriver).GetScreenshot().SaveAsFile("TestScreenShot" + pickBrowser + "-" + count + ".png", ScreenshotImageFormat.Png);
             count++;
         }
@@ -59,6 +61,7 @@ namespace WoogaGoogleMapsHomeTest
         {
             IWebElement acceptButton;
 
+            //checks if browser vierfication exists for new instances of all broswers
             if (webDriver.FindElements(By.XPath("//button[@aria-label='Accept all']")).Count > 0)
             {
                 acceptButton = webDriver.FindElement(By.XPath("//button[@aria-label='Accept all']"));
@@ -91,6 +94,7 @@ namespace WoogaGoogleMapsHomeTest
 
         public void CrossPlaform(string browser)
         {
+            //swtich statment to set up choosen webdriver
             switch (browser.ToLower())
             {
                 case "firefox":
