@@ -20,7 +20,7 @@ namespace WoogaGoogleMapsHomeTest
     {
         IWebDriver webDriver;
         //choose web driver here
-        string pickBrowser = "chrome";
+        string pickBrowser = "edge";
         int count = 1;
         
         [OneTimeSetUp]
