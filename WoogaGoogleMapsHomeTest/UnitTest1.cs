@@ -20,7 +20,7 @@ namespace WoogaGoogleMapsHomeTest
     {
         IWebDriver webDriver;
         //choose web driver here
-        string pickBrowser = "chrome";
+        string pickBrowser = "edge";
         int count = 1;
         
         [OneTimeSetUp]
@@ -72,7 +72,7 @@ namespace WoogaGoogleMapsHomeTest
         }
 
         [Test]
-        public void SearchForMapLocations()
+        public void SearchForMapLocationsTest()
         {
             webDriver.Url = "https://www.google.com/maps";
 
